@@ -1,0 +1,75 @@
+Сайт с Прологом https://swish.swi-prolog.org/
+
+
+
+- Простые запросы к базе знаний для поиска фактов.
+Есть ли в игре Доктор Романов?
+player(the_doctor_romanov)
+
+Mr Muhlick играет за террористов?
+player_team(mr_muhlik, terrorists)
+
+Доктор Романов убил John Kask?
+kill(the_doctor_romanov,john_kask)
+
+Карта de_dust относится к картам Запретной зоны?
+map_type(de_dust2, danger_zone)
+
+В автомате Калашникова 30 патронов?
+weapon_magazine(ak47, 30)
+
+
+- Запросы, использующие логические операторы (и, или, не) для формулирования сложных условий.
+Вывести список террористов, которые убили кого-либо
+player_team(X, terrorists), kill(X,_)
+
+Есть ли в игре mag7 или xm1014?
+active_weapon(mag7);active_weapon(xm1014)
+
+Не активна ли карта Vineyard? 
+not(active_map(dz_vineyard))
+
+Какое оружие относится к пистолетам и имеет 13 патронов?
+weapon_type(X, pistol),weapon_magazine(X, 13)
+
+Какие карты относятся к Запретной зоне или активны?
+active_map(X);map_type(X,danger_zone)
+
+- Запросы, использующие переменные для поиска объектов с определенными характеристиками.
+Кто играет за террористов?
+player_team(Name,terrorists)
+
+Кого убил Number K?
+kill(number_k,X)
+	
+Мертв ли John Kask?
+kill(_,john_kask)
+
+Сколько патронов в p250?
+weapon_magazine(p250,X)
+
+Какое оружие есть у Mr Muhlik?
+player_weapon(mr_muhlik,X)
+
+Есть ли у кого-то из игроков awp?
+player_weapon(_,awp)
+
+
+- Запросы, которые требуют выполнения правил для получения результата.
+У кого-либо есть дробовик?
+is_character_has_shotgun(_)
+
+У Doctor Romanov есть пистолет?
+is_character_has_pistol(the_doctor_romanov)
+
+У кого есть автомат?
+is_character_has_rifle(X)
+
+Кто может использовать дымовую гранату?
+ability_to_throw_grenade(X,smoke_grenade )
+
+У контртеррористов есть гранаты?
+has_team_grenades(counterterrorists)
+
+Карта de_mirage относится к соревновательным и учавствует в игре?
+is_map_competitive(de_mirage)
