@@ -1,0 +1,84 @@
+CREATE TABLE City
+(
+  cityId SERIAL PRIMARY KEY,
+  cityName VARCHAR(255) NOT NULL,
+  destructionStatus BOOLEAN DEFAULT false
+);
+
+CREATE TABLE Human
+(
+    humanId SERIAL PRIMARY KEY,
+    humanName VARCHAR(255) NOT NULL,
+    profession VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE Storage
+(
+    storageId SERIAL PRIMARY KEY,
+    storageName VARCHAR(255) NOT NULL,
+    capacity smallint NOT NULL
+        CHECK (capacity > 0)
+);
+
+CREATE TABLE Path
+(
+    pathId SERIAL PRIMARY KEY,
+    cityId INTEGER REFERENCES City ON DELETE CASCADE NOT NULL,
+    humanId INTEGER REFERENCES Human ON DELETE CASCADE NOT NULL,
+    length INTEGER NOT NULL
+        CHECK (length > 0)
+);
+
+
+CREATE TABLE Location
+(
+    cityId INTEGER REFERENCES City ON DELETE CASCADE NOT NULL,
+    storageId INTEGER REFERENCES Storage ON DELETE CASCADE NOT NULL
+);
+
+CREATE TABLE Mind
+(
+    mindId SERIAL PRIMARY KEY,
+    humanId INTEGER REFERENCES Human ON DELETE CASCADE NOT NULL
+);
+
+CREATE TABLE Oddities
+(
+    odditiesId SERIAL PRIMARY KEY,
+    mindId INTEGER REFERENCES Mind ON DELETE CASCADE NOT NULL,
+    odditiesType VARCHAR(255) NOT NULL,
+    description VARCHAR(1000) NOT NULL
+);
+
+CREATE TABLE Food
+(
+    foodId SERIAL PRIMARY KEY,
+    storageId INTEGER REFERENCES Storage ON DELETE CASCADE NOT NULL,
+    foodType VARCHAR(255) NOT NULL,
+    numberOfFood smallint NOT NULL
+        CHECK(numberOfFood > 0)
+);
+
+CREATE TABLE Weapon
+(
+    weaponId SERIAL PRIMARY KEY,
+    storageId INTEGER REFERENCES Storage ON DELETE CASCADE NOT NULL,
+    weaponType VARCHAR(255) NOT NULL,
+    numberOfWeapon smallint NOT NULL
+        CHECK(numberOfWeapon > 0)
+);
+
+CREATE TABLE Drugs
+(
+    drugId SERIAL PRIMARY KEY,
+    storageId INTEGER REFERENCES Storage ON DELETE CASCADE NOT NULL,
+    drugType VARCHAR(255) NOT NULL,
+    numberOfDrugs smallint NOT NULL
+        CHECK(numberOfDrugs > 0)
+);
+CREATE TABLE Path_Human
+(
+    pathHumanId SERIAL PRIMARY KEY,
+    pathId INTEGER REFERENCES Path ON DELETE CASCADE NOT NULL,
+    humanId INTEGER REFERENCES Human ON DELETE CASCADE NOT NULL
+);
