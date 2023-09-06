@@ -1,0 +1,603 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1>
+
+
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:integer
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>
+
+    Annotations: 
+        rdfs:label "player_team"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/R90ScIhMLbnVCIQs767sIL1>
+
+    Annotations: 
+        rdfs:label "active_map"
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE>
+
+    Annotations: 
+        rdfs:label "player_info"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>
+
+    Annotations: 
+        rdfs:label "player_weapon"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE>
+    
+    
+ObjectProperty: <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>
+
+    Annotations: 
+        rdfs:label "kill"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: <http://webprotege.stanford.edu/R72DpW9blCSNwMdTJns07FL>
+
+    Annotations: 
+        rdfs:label "true"
+    
+    
+DataProperty: <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>
+
+    Annotations: 
+        rdfs:label "weapon_magazine"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE>
+    
+    
+DataProperty: <http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN>
+
+    Annotations: 
+        rdfs:label "team_in_game"
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE>
+
+    Annotations: 
+        rdfs:label "weapon_characteristics"
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>
+
+    Annotations: 
+        rdfs:label "map_type"
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>
+
+    Annotations: 
+        rdfs:label "active_map"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x>
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>
+
+    Annotations: 
+        rdfs:label "player_sex"
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>
+
+    Annotations: 
+        rdfs:label "weapon_damage"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE>
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x>
+
+    Annotations: 
+        rdfs:label "active"
+    
+    SubPropertyOf: 
+        owl:topDataProperty
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>
+
+    Annotations: 
+        rdfs:label "active_player"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x>
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM>
+
+    Annotations: 
+        rdfs:label "active_weapon_type"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x>
+    
+    
+DataProperty: <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>
+
+    Annotations: 
+        rdfs:label "active_weapon"
+    
+    SubPropertyOf: 
+        <http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x>
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q>
+
+    Annotations: 
+        rdfs:label "Rifle"^^xsd:string
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM> value true
+    
+    
+Class: <http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T>
+
+    Annotations: 
+        rdfs:label "Shotgun"
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM> value true
+    
+    
+Class: <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>
+
+    Annotations: 
+        rdfs:label "Weapon"
+    
+    
+Class: <http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC>
+
+    Annotations: 
+        rdfs:label "Pistol"
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM> value true
+    
+    
+Class: <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+
+    Annotations: 
+        rdfs:label "Map"
+    
+    
+Class: <http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC>
+
+    Annotations: 
+        rdfs:label "Grenade"
+    
+    SubClassOf: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM> value true
+    
+    
+Class: <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+
+    Annotations: 
+        rdfs:label "Player"
+    
+    
+Class: <http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i>
+
+    Annotations: 
+        rdfs:label "Team"
+    
+    
+Individual: <http://webprotege.stanford.edu/R7Obg86C8falPoVJAmJu4F9>
+
+    Annotations: 
+        rdfs:label "vaipa"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5>,
+     <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>  <http://webprotege.stanford.edu/RBeVpUNTDFYqcEShECrVV7T>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "woman"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R7wzZ8xBpK3IVJQc3Tl113l>
+
+    Annotations: 
+        rdfs:label "tec9"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  18,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  33,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  false
+    
+    
+Individual: <http://webprotege.stanford.edu/R8A1fZCavSZaYb8nJibiy8P>
+
+    Annotations: 
+        rdfs:label "the_doctor_romanov"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R95s6uEqyn3P2w0ggY63yS>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/RC9zfxpfdD58523YOd2FPZ>,
+     <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>  <http://webprotege.stanford.edu/RwMeP0B7KAzbsAwZq3M6ir>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA>
+
+    Annotations: 
+        rdfs:label "awp"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q>,
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  5,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  115,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R8Qh1cL9fm5hbaP7gnnsJJh>
+
+    Annotations: 
+        rdfs:label "michael_syfers"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R8qymNapCoYJaJFHtSdqpAl>
+
+    Annotations: 
+        rdfs:label "jacques_beltram"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5>,
+     <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>  <http://webprotege.stanford.edu/RPZ4oC4JAAsryrwJEtfjA7>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R95s6uEqyn3P2w0ggY63yS>
+
+    Annotations: 
+        rdfs:label "smoke_grenade"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R9YM7wV6UIGNIGJbXvJhSaZ>
+
+    Annotations: 
+        rdfs:label "xm1014"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T>,
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  7,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  20,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R9g9kKdFdIM2npsY9zEm7Ip>
+
+    Annotations: 
+        rdfs:label "mag7"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T>,
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  5,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  30,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5>
+
+    Annotations: 
+        rdfs:label "p250"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  13,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  38,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RBeVpUNTDFYqcEShECrVV7T>
+
+    Annotations: 
+        rdfs:label "capitan_davida"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "woman"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RBhv326xzKyZGEPpbdpKDLb>
+
+    Annotations: 
+        rdfs:label "number_k"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5>,
+     <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>  <http://webprotege.stanford.edu/R8Qh1cL9fm5hbaP7gnnsJJh>,
+     <http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg>  <http://webprotege.stanford.edu/R8qymNapCoYJaJFHtSdqpAl>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1>
+
+    Annotations: 
+        rdfs:label "CounterTerrorists"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RC9zfxpfdD58523YOd2FPZ>
+
+    Annotations: 
+        rdfs:label "ak47"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q>,
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  30,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  36,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RCFtJ3QGCWkdSQRRLJdIioc>
+
+    Annotations: 
+        rdfs:label "fire_grenade"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RCk2kPwYoxs46WZ91UTveCq>
+
+    Annotations: 
+        rdfs:label "dz_vineyard"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "danger_zone"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  false
+    
+    
+Individual: <http://webprotege.stanford.edu/RPZ4oC4JAAsryrwJEtfjA7>
+
+    Annotations: 
+        rdfs:label "mr_muhlik"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R9YM7wV6UIGNIGJbXvJhSaZ>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/RCFtJ3QGCWkdSQRRLJdIioc>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR>
+
+    Annotations: 
+        rdfs:label "Terrorists"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RYe3HgbO348bD9CdtjB5NE>
+
+    Annotations: 
+        rdfs:label "ar_dizzy"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "flying_scoutsman"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  false
+    
+    
+Individual: <http://webprotege.stanford.edu/Rc2JcZcYOzhG4Wt3z7nxDw>
+
+    Annotations: 
+        rdfs:label "usp_s"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4>,
+        <http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y>  12,
+     <http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu>  35,
+     <http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/Rc7DLPXMedBuUVkqEW1CFD>
+
+    Annotations: 
+        rdfs:label "de_mirage"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "competitive"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RlIZrEz9SBRtSedopxZlaA>
+
+    Annotations: 
+        rdfs:label "de_inferno"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "competitive"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  "fasle"^^xsd:string
+    
+    
+Individual: <http://webprotege.stanford.edu/Rr5Vi31xZwyvusPqv47C9l>
+
+    Annotations: 
+        rdfs:label "de_dust2"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "competitive"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RvP0jyH26n36bxKlru9hqE>
+
+    Annotations: 
+        rdfs:label "dz_sirrocco"
+    
+    Types: 
+        <http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y>  "danger_zone"^^xsd:string,
+     <http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf>  true
+    
+    
+Individual: <http://webprotege.stanford.edu/RwMeP0B7KAzbsAwZq3M6ir>
+
+    Annotations: 
+        rdfs:label "john_kask"
+    
+    Types: 
+        <http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1>
+    
+    Facts:  
+     <http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1>  <http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1>,
+     <http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln>  <http://webprotege.stanford.edu/R9g9kKdFdIM2npsY9zEm7Ip>,
+     <http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja>  "man"^^xsd:string,
+     <http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk>  true
+    
+    

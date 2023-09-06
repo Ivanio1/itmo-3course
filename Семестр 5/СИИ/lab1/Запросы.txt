@@ -4,7 +4,7 @@
 
 - Простые запросы к базе знаний для поиска фактов.
 Есть ли в игре Доктор Романов?
-player(the_doctor_romanov)
+active_player(the_doctor_romanov)
 
 Mr Muhlick играет за террористов?
 player_team(mr_muhlik, terrorists)
