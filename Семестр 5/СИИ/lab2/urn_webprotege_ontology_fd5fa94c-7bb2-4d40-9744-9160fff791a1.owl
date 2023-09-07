@@ -6,8 +6,28 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:webprotege="http://webprotege.stanford.edu/">
     <owl:Ontology rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -25,25 +45,10 @@
     <!-- http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1 -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE"/>
-        <rdfs:label>player_team</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R90ScIhMLbnVCIQs767sIL1 -->
-
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/R90ScIhMLbnVCIQs767sIL1">
-        <rdfs:label>active_map</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE -->
-
-    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label>player_info</rdfs:label>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
+        <rdfs:label>player_team</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -51,7 +56,18 @@
     <!-- http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln -->
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RCANGbKqtzHYx5Tm4FhIhsE"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:range>
         <rdfs:label>player_weapon</rdfs:label>
     </owl:ObjectProperty>
     
@@ -61,7 +77,25 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RvrjXyJ7yM0FnVQhLFpWUg">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <rdfs:label>kill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_grenade -->
+
+    <owl:ObjectProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_grenade">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -77,18 +111,11 @@
     
 
 
-    <!-- http://webprotege.stanford.edu/R72DpW9blCSNwMdTJns07FL -->
-
-    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R72DpW9blCSNwMdTJns07FL">
-        <rdfs:label>true</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R78qp56KUI9EhOKBVfnie5y">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdfs:label>weapon_magazine</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -97,17 +124,9 @@
     <!-- http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <rdfs:label>team_in_game</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE -->
-
-    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:label>weapon_characteristics</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -115,7 +134,8 @@
     <!-- http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
         <rdfs:label>map_type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -124,17 +144,9 @@
     <!-- http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x"/>
-        <rdfs:label>active_map</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja -->
-
-    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RBcw8ygPapixxU80Q8pwlja">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:label>player_sex</rdfs:label>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
+        <rdfs:label>active_map</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -142,17 +154,9 @@
     <!-- http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RDsFaQVw35SS9AM6g7Ia3fu">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/R9fK83wOzxgWluET2AFtNQE"/>
-        <rdfs:label>weapon_damage</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x -->
-
-    <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:label>active</rdfs:label>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdfs:label>weapon_damage</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -160,7 +164,8 @@
     <!-- http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <rdfs:label>active_player</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -169,7 +174,8 @@
     <!-- http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdfs:label>active_weapon_type</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -178,8 +184,137 @@
     <!-- http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y -->
 
     <owl:DatatypeProperty rdf:about="http://webprotege.stanford.edu/RsoyQhpBBt5kfCeSpT795y">
-        <rdfs:subPropertyOf rdf:resource="http://webprotege.stanford.edu/RDtJOD2T8gXn9QhoxMTwC9x"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdfs:label>active_weapon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#ability_to_throw_grenade -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#ability_to_throw_grenade">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_pistol -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_pistol">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_weapon"/>
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_rifle -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_rifle">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_weapon"/>
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_shotgun -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_shotgun">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_weapon"/>
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_team_grenades -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_team_grenades">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_weapon -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_weapon">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_counterterrorist -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_counterterrorist">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_map_competitive -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_map_competitive">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_terrorist -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_terrorist">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map_info -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map_info">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <owl:propertyDisjointWith rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_sex"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_sex -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_sex">
+        <rdfs:subPropertyOf rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_info"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team_info -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team_info">
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type -->
+
+    <owl:DatatypeProperty rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
     </owl:DatatypeProperty>
     
 
@@ -205,7 +340,7 @@
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rifle</rdfs:label>
+        <rdfs:label>Rifle</rdfs:label>
     </owl:Class>
     
 
@@ -228,6 +363,9 @@
     <!-- http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4 -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4">
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <rdfs:label>Weapon</rdfs:label>
     </owl:Class>
     
@@ -251,6 +389,8 @@
     <!-- http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt">
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <rdfs:label>Map</rdfs:label>
     </owl:Class>
     
@@ -274,6 +414,7 @@
     <!-- http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1 -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1">
+        <owl:disjointWith rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <rdfs:label>Player</rdfs:label>
     </owl:Class>
     
@@ -305,8 +446,13 @@
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5"/>
         <webprotege:RvrjXyJ7yM0FnVQhLFpWUg rdf:resource="http://webprotege.stanford.edu/RBeVpUNTDFYqcEShECrVV7T"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">woman</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_pistol rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_pistol>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_terrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_terrorist>
+        <player_info>woman</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>woman</player_sex>
         <rdfs:label>vaipa</rdfs:label>
     </owl:NamedIndividual>
     
@@ -317,9 +463,17 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R7wzZ8xBpK3IVJQc3Tl113l">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>pistol</weapon_type>
         <rdfs:label>tec9</rdfs:label>
     </owl:NamedIndividual>
     
@@ -330,11 +484,17 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8A1fZCavSZaYb8nJibiy8P">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR"/>
-        <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R95s6uEqyn3P2w0ggY63yS"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/RC9zfxpfdD58523YOd2FPZ"/>
         <webprotege:RvrjXyJ7yM0FnVQhLFpWUg rdf:resource="http://webprotege.stanford.edu/RwMeP0B7KAzbsAwZq3M6ir"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
+        <player_grenade rdf:resource="http://webprotege.stanford.edu/R95s6uEqyn3P2w0ggY63yS"/>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <ability_to_throw_grenade rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ability_to_throw_grenade>
+        <has_rifle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_rifle>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_terrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_terrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>the_doctor_romanov</rdfs:label>
     </owl:NamedIndividual>
     
@@ -344,10 +504,20 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">115</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>rifle</weapon_type>
         <rdfs:label>awp</rdfs:label>
     </owl:NamedIndividual>
     
@@ -359,8 +529,13 @@
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_rifle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_rifle>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_counterterrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_counterterrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>michael_syfers</rdfs:label>
     </owl:NamedIndividual>
     
@@ -373,8 +548,13 @@
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5"/>
         <webprotege:RvrjXyJ7yM0FnVQhLFpWUg rdf:resource="http://webprotege.stanford.edu/RPZ4oC4JAAsryrwJEtfjA7"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_pistol rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_pistol>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_counterterrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_counterterrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>jacques_beltram</rdfs:label>
     </owl:NamedIndividual>
     
@@ -385,7 +565,15 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R95s6uEqyn3P2w0ggY63yS">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>grenade</weapon_type>
         <rdfs:label>smoke_grenade</rdfs:label>
     </owl:NamedIndividual>
     
@@ -394,11 +582,21 @@
     <!-- http://webprotege.stanford.edu/R9YM7wV6UIGNIGJbXvJhSaZ -->
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9YM7wV6UIGNIGJbXvJhSaZ">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>shotgun</weapon_type>
         <rdfs:label>xm1014</rdfs:label>
     </owl:NamedIndividual>
     
@@ -407,11 +605,21 @@
     <!-- http://webprotege.stanford.edu/R9g9kKdFdIM2npsY9zEm7Ip -->
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9g9kKdFdIM2npsY9zEm7Ip">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>shotgun</weapon_type>
         <rdfs:label>mag7</rdfs:label>
     </owl:NamedIndividual>
     
@@ -420,11 +628,21 @@
     <!-- http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5 -->
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>pistol</weapon_type>
         <rdfs:label>p250</rdfs:label>
     </owl:NamedIndividual>
     
@@ -436,8 +654,13 @@
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R8PhzTuJkEE7z8Pm2eQrVnA"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">woman</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_rifle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_rifle>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_counterterrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_counterterrorist>
+        <player_info>woman</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>woman</player_sex>
         <rdfs:label>capitan_davida</rdfs:label>
     </owl:NamedIndividual>
     
@@ -451,8 +674,13 @@
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R9nE3eBTvjjex9B1eGi1Dt5"/>
         <webprotege:RvrjXyJ7yM0FnVQhLFpWUg rdf:resource="http://webprotege.stanford.edu/R8Qh1cL9fm5hbaP7gnnsJJh"/>
         <webprotege:RvrjXyJ7yM0FnVQhLFpWUg rdf:resource="http://webprotege.stanford.edu/R8qymNapCoYJaJFHtSdqpAl"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_pistol rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_pistol>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_terrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_terrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>number_k</rdfs:label>
     </owl:NamedIndividual>
     
@@ -463,6 +691,7 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <webprotege:R7atQ84gLyNRjtmTiWhuwpN rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:R7atQ84gLyNRjtmTiWhuwpN>
+        <team_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</team_info>
         <rdfs:label>CounterTerrorists</rdfs:label>
     </owl:NamedIndividual>
     
@@ -472,10 +701,20 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RC9zfxpfdD58523YOd2FPZ">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>rifle</weapon_type>
         <rdfs:label>ak47</rdfs:label>
     </owl:NamedIndividual>
     
@@ -486,7 +725,15 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCFtJ3QGCWkdSQRRLJdIioc">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>grenade</weapon_type>
         <rdfs:label>fire_grenade</rdfs:label>
     </owl:NamedIndividual>
     
@@ -496,8 +743,9 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RCk2kPwYoxs46WZ91UTveCq">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">danger_zone</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>danger_zone</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
         <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <map_info>danger_zone</map_info>
         <rdfs:label>dz_vineyard</rdfs:label>
     </owl:NamedIndividual>
     
@@ -509,9 +757,15 @@
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R9YM7wV6UIGNIGJbXvJhSaZ"/>
-        <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/RCFtJ3QGCWkdSQRRLJdIioc"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
+        <player_grenade rdf:resource="http://webprotege.stanford.edu/RCFtJ3QGCWkdSQRRLJdIioc"/>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <ability_to_throw_grenade rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ability_to_throw_grenade>
+        <has_shotgun rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_shotgun>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_terrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_terrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>mr_muhlik</rdfs:label>
     </owl:NamedIndividual>
     
@@ -522,6 +776,8 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCy0ERy2VHozCVmtVEcLk2i"/>
         <webprotege:R7atQ84gLyNRjtmTiWhuwpN rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:R7atQ84gLyNRjtmTiWhuwpN>
+        <has_team_grenades rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_team_grenades>
+        <team_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</team_info>
         <rdfs:label>Terrorists</rdfs:label>
     </owl:NamedIndividual>
     
@@ -531,8 +787,9 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RYe3HgbO348bD9CdtjB5NE">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flying_scoutsman</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>flying_scoutsman</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
         <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <map_info>flying_scoutsman</map_info>
         <rdfs:label>ar_dizzy</rdfs:label>
     </owl:NamedIndividual>
     
@@ -543,9 +800,17 @@
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/Rc2JcZcYOzhG4Wt3z7nxDw">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AfqHCIZOjTUNrXhPkoYk4"/>
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://webprotege.stanford.edu/RcTby6la0qui6fM5txjdBM"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
         <webprotege:R78qp56KUI9EhOKBVfnie5y rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</webprotege:R78qp56KUI9EhOKBVfnie5y>
         <webprotege:RDsFaQVw35SS9AM6g7Ia3fu rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</webprotege:RDsFaQVw35SS9AM6g7Ia3fu>
+        <webprotege:RcTby6la0qui6fM5txjdBM rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RcTby6la0qui6fM5txjdBM>
         <webprotege:RsoyQhpBBt5kfCeSpT795y rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RsoyQhpBBt5kfCeSpT795y>
+        <weapon_type>pistol</weapon_type>
         <rdfs:label>usp_s</rdfs:label>
     </owl:NamedIndividual>
     
@@ -555,8 +820,11 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/Rc7DLPXMedBuUVkqEW1CFD">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
         <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <is_map_competitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_map_competitive>
+        <map_info>competitive</map_info>
+        <map_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</map_info>
         <rdfs:label>de_mirage</rdfs:label>
     </owl:NamedIndividual>
     
@@ -566,8 +834,9 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RlIZrEz9SBRtSedopxZlaA">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
-        <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fasle</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:RBFFHndCHLI4in6bPRFiJXf>fasle</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <map_info>competitive</map_info>
         <rdfs:label>de_inferno</rdfs:label>
     </owl:NamedIndividual>
     
@@ -577,8 +846,11 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/Rr5Vi31xZwyvusPqv47C9l">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>competitive</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
         <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <is_map_competitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_map_competitive>
+        <map_info>competitive</map_info>
+        <map_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</map_info>
         <rdfs:label>de_dust2</rdfs:label>
     </owl:NamedIndividual>
     
@@ -588,8 +860,9 @@
 
     <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/RvP0jyH26n36bxKlru9hqE">
         <rdf:type rdf:resource="http://webprotege.stanford.edu/R9BRKbummZhQ1KrmqxZLFWt"/>
-        <webprotege:R9lXgkOWe1YjzDoU3t9y57y rdf:datatype="http://www.w3.org/2001/XMLSchema#string">danger_zone</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
+        <webprotege:R9lXgkOWe1YjzDoU3t9y57y>danger_zone</webprotege:R9lXgkOWe1YjzDoU3t9y57y>
         <webprotege:RBFFHndCHLI4in6bPRFiJXf rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RBFFHndCHLI4in6bPRFiJXf>
+        <map_info>danger_zone</map_info>
         <rdfs:label>dz_sirrocco</rdfs:label>
     </owl:NamedIndividual>
     
@@ -601,13 +874,482 @@
         <rdf:type rdf:resource="http://webprotege.stanford.edu/RCqna4r3Mh4XHFcBv1Wvdn1"/>
         <webprotege:R8CnTPLjRWkw50lG62b3Ky1 rdf:resource="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1"/>
         <webprotege:RWsPBfKFwfaWm1TEGfW7ln rdf:resource="http://webprotege.stanford.edu/R9g9kKdFdIM2npsY9zEm7Ip"/>
-        <webprotege:RBcw8ygPapixxU80Q8pwlja rdf:datatype="http://www.w3.org/2001/XMLSchema#string">man</webprotege:RBcw8ygPapixxU80Q8pwlja>
         <webprotege:RQ3zzJksQLjYk83J1GyaTk rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</webprotege:RQ3zzJksQLjYk83J1GyaTk>
+        <has_shotgun rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_shotgun>
+        <has_weapon rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</has_weapon>
+        <is_counterterrorist rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_counterterrorist>
+        <player_info>man</player_info>
+        <player_info rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</player_info>
+        <player_sex>man</player_sex>
         <rdfs:label>john_kask</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило, проверяющее есть ли в команде гранаты</rdfs:comment>
+        <rdfs:label>S8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/R7atQ84gLyNRjtmTiWhuwpN"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln"/>
+                                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                        <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type"/>
+                                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                                                <swrl:argument2>grenade</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_team_grenades"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#team"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило о принадлежности к контртеррористам</rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="http://webprotege.stanford.edu/RBsOyxRWAJ4308M4r0Ib6k1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_counterterrorist"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило о принадлежности к террористам</rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/R8CnTPLjRWkw50lG62b3Ky1"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="http://webprotege.stanford.edu/RPgDydM8Dc17BjOfRv6EDR"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_terrorist"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило о наличии пистолета</rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type"/>
+                                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                                        <swrl:argument2>pistol</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_pistol"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило о наличии автомата</rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type"/>
+                                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                                        <swrl:argument2>rifle</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_rifle"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило о наличии дробовика</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RWsPBfKFwfaWm1TEGfW7ln"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon_type"/>
+                                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                                        <swrl:argument2>shotgun</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#has_shotgun"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило, проверяющее возможность бросить гранату</rdfs:comment>
+        <rdfs:label>S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RQ3zzJksQLjYk83J1GyaTk"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#player_grenade"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                                <swrl:argument2 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#weapon"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#ability_to_throw_grenade"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#character"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Правило, проверяющее является ли карта соревновательной и активной</rdfs:comment>
+        <rdfs:label>S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/RBFFHndCHLI4in6bPRFiJXf"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://webprotege.stanford.edu/R9lXgkOWe1YjzDoU3t9y57y"/>
+                                <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map"/>
+                                <swrl:argument2>competitive</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#is_map_competitive"/>
+                        <swrl:argument1 rdf:resource="urn:webprotege:ontology:fd5fa94c-7bb2-4d40-9744-9160fff791a1#map"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 

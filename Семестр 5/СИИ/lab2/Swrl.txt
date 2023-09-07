@@ -1,0 +1,8 @@
+active_player(?character, true) ^ player_team(?character, Terrorists) -> is_terrorist(?character, true)
+active_player(?character, true) ^ player_team(?character, CounterTerrorists) -> is_counterterrorist(?character, true)
+active_player(?character,true) ^ player_weapon(?character, ?weapon) ^ weapon_type(?weapon, "shotgun") -> has_shotgun(?character,true)
+active_player(?character,true) ^ player_weapon(?character, ?weapon) ^ weapon_type(?weapon, "pistol") -> has_pistol(?character,true)
+active_player(?character,true) ^ player_weapon(?character, ?weapon) ^ weapon_type(?weapon, "rifle") -> has_rifle(?character,true)
+active_map(?map,true) ^map_type(?map, "competitive")  ->  is_map_competitive(?map,true)
+active_player(?character,true) ^ player_grenade(?character, ?weapon) ^ weapon_type(?weapon, "grenade")  -> ability_to_throw_grenade(?character, true)
+team_in_game(?team,true) ^ player_team(?character, ?team) ^ player_weapon(?character, ?weapon) ^ weapon_type(?weapon, "grenade") -> has_team_grenades(?team,true)

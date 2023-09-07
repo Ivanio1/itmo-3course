@@ -79,15 +79,17 @@ player_sex(vaipa, woman).
 /*Отношения*/
 %Факты о наличие оружия у игрока (отношение оружия и игрока)
 player_weapon(the_doctor_romanov, ak47).
-player_weapon(the_doctor_romanov, smoke_grenade).
 player_weapon(number_k, p250).
-player_weapon(mr_muhlik,fire_grenade).
 player_weapon(vaipa, p250).
 player_weapon(mr_muhlik,xm1014).
 player_weapon(michael_syfers, awp).
 player_weapon(jacques_beltram, p250).
 player_weapon(john_kask, mag7).
 player_weapon(capitan_davida, awp).
+
+%Факты о наличие гранаты у игрока (отношение гранаты и игрока)
+player_grenade(the_doctor_romanov, smoke_grenade).
+player_grenade(mr_muhlik,fire_grenade).
 
 %Факты убийства игроков во время игры (отношение двух игроков)
 kill(number_k,michael_syfers).
@@ -157,13 +159,13 @@ is_map_competitive(Map):-
 %Правило, проверяющее возможность бросить определённую гранату
 ability_to_throw_grenade(Character, Grenade):-
    active_player(Character),
-    player_weapon(Character,Grenade).	
+   player_grenade(Character,Grenade).	
 
 %Правило, проверяющее есть ли в команде гранаты
 has_team_grenades(Team):-
     team_in_game(Team),
     player_team(Character, Team),
     player_weapon(Character,Weapon),
-     weapon_type(Weapon,grenade).
+    weapon_type(Weapon,grenade).
 
 

@@ -49,7 +49,7 @@ kill(_,john_kask)
 weapon_magazine(p250,X)
 
 Какое оружие есть у Mr Muhlik?
-player_weapon(mr_muhlik,X)
+player_weapon(mr_muhlik,X);player_grenade(mr_muhlik,X)
 
 Есть ли у кого-то из игроков awp?
 player_weapon(_,awp)
