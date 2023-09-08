@@ -1,0 +1,41 @@
+Кто в игре?
+active_player value true
+
+У кого есть Awp?
+player_weapon value awp
+
+Кто убил John Kask?
+kill value john_kask
+
+Какие карты относятся к Запретной зоне?
+map_type value "danger_zone"
+
+В каком оружии 30 патронов и урон 30 единиц?
+(weapon_magazine value 5) and (weapon_damage value 30)
+
+Вывести список террористов, которые убили кого-либо
+(kill some Player) and (player_team value Terrorists)
+
+Есть ли в игре mag7 или xm1014?
+(player_weapon value mag7) or (player_weapon value xm1014)
+
+У какой команды есть гранаты?
+has_team_grenades value true
+
+Карта de_mirage относится к соревновательным и учавствует в игре?
+(active_map value true) and (map_type value "competitive")
+
+У кого-либо есть пистолет?
+player_weapon some (weapon_type value "pistol")
+
+Кто может бросать гранаты?
+ability_to_throw_grenade value true
+
+Выведи список женщин
+player_sex value "woman"
+
+Какие карты Запретной зоны учавствуют в игре?
+(active_map value true) and (map_type value "danger_zone")
+
+В каком оружии 13 патронов?
+weapon_magazine value 13
