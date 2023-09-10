@@ -878,26 +878,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/R7JFolbe2q9NTi6d2KJDp9Q"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/R8KrLdTVf5FnR3caBfEEi1T"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/R9AlzdfsPqzUioy7Jloi3YC"/>
-            <rdf:Description rdf:about="http://webprotege.stanford.edu/RC78eZkpbSzrRrkuITFeGMC"/>
-        </owl:members>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Rules
     //
     ///////////////////////////////////////////////////////////////////////////////////////
