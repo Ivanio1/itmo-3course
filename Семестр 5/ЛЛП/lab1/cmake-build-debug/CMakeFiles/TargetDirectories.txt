@@ -1,3 +1,0 @@
-C:/Users/Asus/Desktop/ИТМО_КУРС3/itmo-3course/Семестр 5/ЛЛП/lab1/cmake-build-debug/CMakeFiles/lab1.dir
-C:/Users/Asus/Desktop/ИТМО_КУРС3/itmo-3course/Семестр 5/ЛЛП/lab1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Asus/Desktop/ИТМО_КУРС3/itmo-3course/Семестр 5/ЛЛП/lab1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
