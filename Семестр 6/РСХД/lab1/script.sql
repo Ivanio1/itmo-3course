@@ -1,9 +1,9 @@
 DO $$
 DECLARE
-    row     record;
-    from_user text := 's336760';
-    to_user text := 's111111';
-    table_num int := 1;
+    row         record;
+    from_user   text := current_setting('myvars.from_user', true);
+    to_user     text := current_setting('myvars.to_user', true);
+    table_num   int := 1;
     name_of_table text;
 BEGIN
     RAISE INFO 'Текущий пользователь: %', from_user;
@@ -17,7 +17,7 @@ BEGIN
         JOIN pg_tables pt ON rg.table_schema = pt.schemaname AND rg.table_name = pt.tablename
         WHERE grantee = from_user
         LOOP
-        	RAISE INFO '% %', table_num, row.name_of_table;
-        	table_num := table_num + 1;
-    	END LOOP;
-END $$;
+            RAISE INFO '% %', table_num, row.name_of_table;
+            table_num := table_num + 1;
+        END LOOP;
+END $$
