@@ -1,9 +1,1 @@
-\prompt 'Введите имя текущего пользователя: ' current_user_name
-
-\set  current_user_name :current_user_name 
-
-\prompt 'Введите имя пользователя, кому нужно выдать права доступа: ' target_user_name
-
-\set target_user_name :target_user_name 
-
-\echo :current_user_name
+ psql -h pg -d studs -f ~/script.sql 2>&1 | sed 's|.*INFO:  ||g'
