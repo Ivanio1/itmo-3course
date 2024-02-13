@@ -1,0 +1,19 @@
+Version 4
+SymbolType BLOCK
+LINE Normal 48 -16 48 0
+LINE Normal 96 0 48 -16
+LINE Normal 48 16 96 0
+LINE Normal 48 0 48 16
+LINE Normal 48 0 17 0
+LINE Normal 48 -16 48 -31
+LINE Normal 112 0 143 0
+CIRCLE Normal 112 -8 96 8
+PIN 16 0 TOP 8
+PINATTR PinName VIN
+PINATTR SpiceOrder 1
+PIN 48 -32 LEFT 8
+PINATTR PinName VDD
+PINATTR SpiceOrder 2
+PIN 144 0 TOP 8
+PINATTR PinName VOUT
+PINATTR SpiceOrder 3
