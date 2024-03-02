@@ -26,9 +26,6 @@ end
 $$;
 
 
-SELECT pivotcode();
-
-
 DO
 $$
     DECLARE
@@ -41,35 +38,3 @@ $$
 $$;
 
 SELECT * FROM temp_pivot;
-
-DO
-$$
-    DECLARE
-        row        record;
-        query_text TEXT;
-        dynsql1    varchar;
-        columnlist varchar;
-    BEGIN
-        dynsql1 = 'select string_agg(distinct grantee||'' '',''	|  '' order by grantee ||'' '') from information_schema.role_table_grants rg
-         JOIN pg_tables pt ON rg.table_schema = pt.schemaname AND rg.table_name = pt.tablename;';
-        execute dynsql1 into columnlist;
-
-        SELECT pivotcode() INTO query_text;
-        RAISE INFO 'grantor	| %' , columnlist;
-        FOR row IN
-            EXECUTE query_text
-            LOOP
-                DECLARE
-                    result text;
-                BEGIN
-                    result = row::text;
-                    result = REPLACE(result, ',', '	|	');
-                    result = REPLACE(result, '(', '');
-                    result = REPLACE(result, ')', '');
-                    RAISE INFO '%',result;
-                END;
-            END LOOP;
-    END
-$$;
-
-
