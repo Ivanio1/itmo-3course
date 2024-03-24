@@ -1,0 +1,18 @@
+сделать табличку 
+сделать вторую таблицу = FK
+Insert
+
+pg_inspect посмотреть как храняться записи 
+как бд FK 
+
+
+INSERT INTO authors (author_name) VALUES ('Author D');
+
+UPDATE books SET author_id = 4 where author_id =1;
+
+
+DELETE FROM authors WHERE author_id =4;
+
+
+SELECT lp, t_xmin, t_xmax, t_attrs, t_ctid FROM heap_page_item_attrs(get_raw_page('books', 0), 'books'::regclass);
+
