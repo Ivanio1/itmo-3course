@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar 25 17:31:59 2024
+# Process ID: 8508
+# Current directory: C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.runs/synth_1
+# Command line: vivado.exe -log my_func.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source my_func.tcl
+# Log file: C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.runs/synth_1/my_func.vds
+# Journal file: C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source my_func.tcl -notrace

@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.sim/sim_1/behav/xsim/glbl.v,1711376837,verilog,,,,glbl,,,,,,,,
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sim_1/new/my_func_tb.v,1711379395,verilog,,,,my_func_tb,,,,,,,,
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/frequency_divider.v,1711376838,verilog,,C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/mul.v,,frequency_divider,,,,,,,,
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/mul.v,1711376838,verilog,,C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/my_func.v,,mul,,,,,,,,
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/my_func.v,1711376838,verilog,,C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/res_to_seg7.v,,my_func,,,,,,,,
+C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sources_1/new/res_to_seg7.v,1711376838,verilog,,C:/Users/Asus/Downloads/DigitalCircuitry-lab3/lab3.srcs/sim_1/new/my_func_tb.v,,res_to_seg7,,,,,,,,
