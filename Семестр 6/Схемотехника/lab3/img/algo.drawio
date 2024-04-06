@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" modified="2024-04-05T09:33:38.039Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0" etag="8Nx0VeRZ-6gv3yiN6bN5" version="24.2.2" type="device">
+  <diagram name="Страница — 1" id="D9iz24TrCCZKgYRiuPoR">
+    <mxGraphModel dx="802" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1ffiZc_JzY2thidy9S---1" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="220" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1ffiZc_JzY2thidy9S---2" target="1ffiZc_JzY2thidy9S---3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---2" value="Ввод числа A через переключатели&amp;nbsp;SW15 – SW8" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="300" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1ffiZc_JzY2thidy9S---3" target="1ffiZc_JzY2thidy9S---4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---3" value="Ввод числа B через переключатели&amp;nbsp;SW7 – SW0" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="305" y="390" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---4" value="Нажатие кнопки BTNC" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="1ffiZc_JzY2thidy9S---1" target="1ffiZc_JzY2thidy9S---2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="380" as="sourcePoint" />
+            <mxPoint x="440" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1ffiZc_JzY2thidy9S---4" target="1ffiZc_JzY2thidy9S---1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="380" as="sourcePoint" />
+            <mxPoint x="440" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="510" />
+              <mxPoint x="200" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JGUoL5Wn5uOpXbl3ooeA-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1ffiZc_JzY2thidy9S---9" target="JGUoL5Wn5uOpXbl3ooeA-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---9" value="Нажатие кнопки&amp;nbsp;&lt;div&gt;RST&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---10" value="" style="endArrow=classicThin;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;endFill=1;" parent="1" source="1ffiZc_JzY2thidy9S---4" target="1ffiZc_JzY2thidy9S---9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="460" as="sourcePoint" />
+            <mxPoint x="440" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1ffiZc_JzY2thidy9S---12" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="1ffiZc_JzY2thidy9S---9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="460" as="sourcePoint" />
+            <mxPoint x="200" y="510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JGUoL5Wn5uOpXbl3ooeA-1" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
